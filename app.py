@@ -1,22 +1,7 @@
 
-import sys
-print("🔹 Versão do Python:", sys.version)
 
-try:
-    import openai
-    print("✅ OpenAI foi importado com sucesso!")
-except ModuleNotFoundError:
-    print("❌ ERRO: OpenAI NÃO está instalado!")
-
-from dotenv import load_dotenv
+import openai
 import os
-
-# Carregar variáveis do arquivo .env
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = "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"  # 🔹 Coloque sua chave real aqui
-
-
 app = Flask(__name__
 
 # 🚀 Garantindo que a variável de ambiente seja carregada corretamente
