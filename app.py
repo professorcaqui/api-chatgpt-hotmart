@@ -1,3 +1,14 @@
+
+import sys
+print("🔹 Versão do Python:", sys.version)
+
+try:
+    import openai
+    print("✅ OpenAI foi importado com sucesso!")
+except ModuleNotFoundError:
+    print("❌ ERRO: OpenAI NÃO está instalado!")
+
+
 from flask import Flask, request, jsonify
 import openai
 import os
